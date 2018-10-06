@@ -3,19 +3,25 @@
     <head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{sie.baseurl}}/CSS/common.css">
 	    <title>My Blog</title>
     </head>
     <body>
 
-        <h1>My Blogs</h1>
-        <nav>
-            <a href="{{site.baseurl}}/">Home</a> |
-            <a href="{{site.baseurl}}/news.html">News</a> |
-            <a href="{{site.baseurl}}/about.html">About</a>
-        </nav>
+        <header>
+            <h1>My Blogs</h1>
+            {% include nav.html navclass='nav-top' %}
+        </header>
+
 
         {{ content }}
+
+        <footer>
+            {% include nav.html navclass='nav-bottom' %}
+            © 2018 PIR4T3 sk-shubhamkumar jeklly-demo
+        </footer>
+            
 
 
     </body>
